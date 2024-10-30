@@ -5,10 +5,15 @@
 @section('main-content')
     <div class="container-fluid show-bg mt-4">
         <div class="row">
-            <div class="col-12 text-center text-dark fw-bold mt-3 mb-3">
+            <div class="col-12 text-center text-dark fw-bold mt-3 mb-2">
                 <h2> Album List:</h2>
             </div>
-            <div class="col-12 mt-4">
+            <div class="col-12">
+                <div class="mb-3">
+                    <button class="btn btn-primary">
+                        Create New Album
+                    </button>
+                </div>
                 <table class="table table-hover table-striped">
                     <thead>
                         <tr>
