@@ -19,4 +19,5 @@ Route::get('/', [PageController::class,'home'])->name('home');
 
 // rotte per gli albums
 Route::get('/albums',[AlbumController::class,'index'])->name('albums.index');
+Route::get('/albums/create',[AlbumController::class,'create'])->name('album.create');
 Route::get('/albums/{album}', [AlbumController::class,'show'])->name('albums.show');

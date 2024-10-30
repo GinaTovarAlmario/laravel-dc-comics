@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', 'List Albums')
+@section('page-title', $album["title"])
 @section('main-content')
     <div class="container-fluid show-bg">
         <div class="row">
