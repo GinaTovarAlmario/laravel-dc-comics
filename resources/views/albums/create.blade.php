@@ -10,20 +10,17 @@
                 </h1>
             </div>
             <form class="col-8 card bg-dark-subtle m-3" method="POST" action="{{route('albums.store')}}">
+                @csrf
                 <div class="mb-3">
-                    <label for="title" class="form-label">Email address</label>
+                    <label for="title" class="form-label">Title</label>
                     <input type="text" class="form-control" id="title" name="title">
-                </div>
-                <div class="mb-3">
-                    <label for="date_release" class="form-label">Title</label>
-                    <input type="text" class="form-control" id="date_release" name="date_release">
                 </div>
                 <div class="mb-3">
                     <label for="date_release" class="form-label">Date of Release</label>
                     <input type="text" class="form-control" id="date_release" name="date_release">
                 </div>
                 <div class="mb-3">
-                    <label for="img_url" class="form-label">Link Image Cover</label>
+                    <label for="img_url" class="form-label">Image Cover Url</label>
                     <input type="text" class="form-control" id="img_url" name="img_url">
                 </div>
                 <div class="mb-3">

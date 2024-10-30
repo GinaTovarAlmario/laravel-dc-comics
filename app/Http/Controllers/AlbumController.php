@@ -31,7 +31,18 @@ class AlbumController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $albumData = $request->all();
+
+        $newAlbum = new Album();
+        $newAlbum->title = $albumData['title'];
+        $newAlbum->date_release = $albumData['date_release'];
+        $newAlbum->img_url = $albumData['img_url'];
+        $newAlbum->number_of_tracks = $albumData['number_of_tracks'];
+        $newAlbum->main_track = $albumData['main_track'];
+        $newAlbum->description = $albumData['description'];
+
+
+        $newAlbum->save();
     }
 
     /**
