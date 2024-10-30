@@ -59,7 +59,8 @@ class AlbumController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $album = Album::findOrFail($id);
+        return view("albums.edit", compact("album"));
     }
 
     /**

@@ -9,7 +9,7 @@
                     Creating a New Album
                 </h1>
             </div>
-            <form class="col-8 card bg-dark-subtle m-3" method="POST" action="{{route('albums.store')}}">
+            <form class="col-8 card bg-dark-subtle m-3" method="POST" action="{{route('album.store')}}">
                 @csrf
                 <div class="mb-3">
                     <label for="title" class="form-label">Title</label>
