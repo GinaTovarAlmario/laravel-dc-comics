@@ -68,7 +68,18 @@ class AlbumController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $formData = $request->all();
+        $album = Album::findOrFail($id);
+
+        $album->title = $formData["title"];
+        $album->date_release = $formData["date_release"];
+        $album->img_url = $formData["img_url"];
+        $album->number_of_tracks = $formData["number_of_tracks"];
+        $album->main_track = $formData["main_track"];
+        $album->description = $formData["description"];
+
+        $album->update();
+        return redirect()->route("album.show", [ "id" => $album->id]);
     }
 
     /**
