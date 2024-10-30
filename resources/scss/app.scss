@@ -1,1 +1,10 @@
 @use "~bootstrap/scss/bootstrap" as *;
+* {
+    color: purple;
+}
+body{
+    overflow-x: hidden;
+}
+.home{
+    min-height: 80vh;
+}
