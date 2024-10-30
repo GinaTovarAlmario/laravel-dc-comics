@@ -3,7 +3,7 @@
 @section('page-title', 'List Albums')
 
 @section('main-content')
-    <div class="card-body container">
+    <div class="card-body container mt-4">
         <div class="row">
             <div class="col">
                 <table class="table table-dark table-striped">
@@ -14,6 +14,7 @@
                             <th scope="col">Date of Release</th>
                             <th scope="col">Number of tracks</th>
                             <th scope="col">Main track</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -26,6 +27,9 @@
                                 <td>{{$album->date_release}}</td>
                                 <td>{{$album->number_of_tracks}}</td>
                                 <td>{{$album->main_track}}</td>
+                                <td>
+                                    <a href="{{ route('albums.show',$album->id) }}" class="btn btn-primary">Show</a>
+                                </td>
                             </tr>
                         @empty
                             <tr>
@@ -34,7 +38,6 @@
                                 </td>
                             </tr>
                         @endforelse
-
                     </tbody>
                 </table>
             </div>
