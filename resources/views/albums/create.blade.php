@@ -9,7 +9,7 @@
                     Creating a New Album
                 </h1>
             </div>
-            <form class="col-8 card bg-dark-subtle m-3">
+            <form class="col-8 card bg-dark-subtle m-3" method="POST" action="{{route('albums.store')}}">
                 <div class="mb-3">
                     <label for="title" class="form-label">Email address</label>
                     <input type="text" class="form-control" id="title" name="title">
