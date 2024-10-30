@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('albums', function (Blueprint $table) {
             $table->id();
+            $table->string('title')->nullable(false);
+            $table->date('date_release')->nullable(false);
+            $table->string('img_url');
+            $table->tinyInteger('number_of_tracks')->unsigned();
+            $table->string('main_track');
+            $table->text('description');
             $table->timestamps();
         });
     }
