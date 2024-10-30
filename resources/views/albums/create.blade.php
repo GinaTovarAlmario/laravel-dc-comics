@@ -17,7 +17,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="date_release" class="form-label">Date of Release</label>
-                    <input type="text" class="form-control" id="date_release" name="date_release">
+                    <input type="text" class="form-control" id="date_release" name="date_release" placeholder="YYYY-MM-DD">
                 </div>
                 <div class="mb-3">
                     <label for="img_url" class="form-label">Image Cover Url</label>
