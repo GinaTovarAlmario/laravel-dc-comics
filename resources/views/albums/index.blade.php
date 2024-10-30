@@ -11,7 +11,9 @@
             <div class="col-12">
                 <div class="mb-3">
                     <button class="btn bedit">
-                        Create New Album
+                        <a class="text-decoration-none text-dark" href="{{route('album.create')}}">
+                            Create New Album
+                        </a>
                     </button>
                 </div>
                 <table class="table table-hover table-striped">
@@ -36,7 +38,7 @@
                                 <td>{{$album->number_of_tracks}}</td>
                                 <td>{{$album->main_track}}</td>
                                 <td>
-                                    <a href="{{ route('albums.show',$album->id) }}" class="btn btn-sm bshow me-2">Show</a>
+                                    <a href="{{ route('album.show',$album->id) }}" class="btn btn-sm bshow me-2">Show</a>
                                     <a href="#" class="btn btn-sm bedit me-2">Edit</a>
                                     <a href="#" class="btn btn-sm bdelete me-2">Delete</a>
                                 </td>

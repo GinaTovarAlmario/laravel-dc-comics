@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PageController::class,'home'])->name('home');
 
 // rotte per gli albums
-Route::get('/albums',[AlbumController::class,'index'])->name('albums.index');
+Route::get('/albums',[AlbumController::class,'index'])->name('album.index');
 Route::get('/albums/create',[AlbumController::class,'create'])->name('album.create');
-Route::get('/albums/{album}', [AlbumController::class,'show'])->name('albums.show');
+Route::get('/albums/{id}', [AlbumController::class,'show'])->name('album.show');
 Route::post('/albums',[AlbumController::class,'store'])->name('albums.store');

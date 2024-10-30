@@ -27,7 +27,7 @@
                             <span class="fw-bold text-black">Description: </span> {{ $album->description }}
 
                         </p>
-                        <a href="{{ route('albums.index') }}" class="btn btn-primary">Go Back</a>
+                        <a href="{{ route('album.index') }}" class="btn btn-primary">Go Back</a>
                     </div>
                 </div>
             </div>

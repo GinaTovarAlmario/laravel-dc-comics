@@ -41,15 +41,16 @@ class AlbumController extends Controller
         $newAlbum->main_track = $albumData['main_track'];
         $newAlbum->description = $albumData['description'];
 
-
         $newAlbum->save();
+        return redirect()->route('album.show',['id' => $newAlbum->id]);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Album $album)
+    public function show(string $id)
     {
+        $album = Album::findOrFail($id);
         return view('albums.show', compact('album'));
     }
 

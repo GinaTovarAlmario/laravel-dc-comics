@@ -10,7 +10,7 @@
                         <a class="nav-link @if (Route::is('home')) active @endif" aria-current="page" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link @if (Route::is('teams.index')) active @endif" href="{{ route('albums.index') }}">Albums</a>
+                        <a class="nav-link @if (Route::is('album.index')) active @endif" href="{{ route('album.index') }}">Albums</a>
                     </li>
                 </ul>
             </div>
