@@ -39,7 +39,7 @@
                                 <td>{{$album->main_track}}</td>
                                 <td>
                                     <a href="{{ route('album.show',$album->id) }}" class="btn btn-sm bshow me-2">Show</a>
-                                    <a href="#" class="btn btn-sm bedit me-2">Edit</a>
+                                    <a href="{{ route("album.edit", $album->id) }}" class="btn btn-sm bedit me-2">Edit</a>
                                     <a href="#" class="btn btn-sm bdelete me-2">Delete</a>
                                 </td>
                             </tr>
