@@ -21,4 +21,7 @@ Route::get('/', [PageController::class,'home'])->name('home');
 Route::get('/albums',[AlbumController::class,'index'])->name('album.index');
 Route::get('/albums/create',[AlbumController::class,'create'])->name('album.create');
 Route::get('/albums/{id}', [AlbumController::class,'show'])->name('album.show');
-Route::post('/albums',[AlbumController::class,'store'])->name('albums.store');
+Route::post('/albums',[AlbumController::class,'store'])->name('album.store');
+Route::get("/albums/{id}/edit", [AlbumController::class, "edit"])->name("album.edit");
+Route::put("/albums/{id}", [AlbumController::class, "update"])->name("album.update");
+Route::delete("/albums/{id}", [AlbumController::class, "destroy"])->name("album.delete");
