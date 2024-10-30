@@ -3,7 +3,7 @@
 @section('page-title', 'List Albums')
 
 @section('main-content')
-    <div class="container">
+    <div class="card-body container">
         <div class="row">
             <div class="col">
                 <table class="table table-striped">
