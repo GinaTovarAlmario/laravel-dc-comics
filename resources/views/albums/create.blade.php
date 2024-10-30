@@ -9,7 +9,7 @@
                     Creating a New Album
                 </h1>
             </div>
-            <div class="col-12 card bg-dark-subtle m-3">
+            <form class="col-8 card bg-dark-subtle m-3">
                 <div class="mb-3">
                     <label for="title" class="form-label">Email address</label>
                     <input type="text" class="form-control" id="title" name="title">
@@ -36,7 +36,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Brief Description</label>
-                    <textarea class="form-control" id="description" name="description" rows="10"></textarea>
+                    <textarea class="form-control" id="description" name="description" rows="8"></textarea>
                 </div>
                 <div class="mb-3">
                     <button type="submit" class="btn bshow me-3">
@@ -46,7 +46,7 @@
                         Reset
                     </button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 @endsection
