@@ -31,6 +31,12 @@ class AlbumController extends Controller
      */
     public function store(Request $request)
     {
+        // vado a fare la validazione per i dati inseriti
+        $request->validate([
+            'title'=>'required|string|min:3|max:255',
+            'main_track'=>'required|string|min:2|max:255'
+        ]);
+
         $albumData = $request->all();
 
         $newAlbum = new Album();

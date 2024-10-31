@@ -42,7 +42,7 @@
                                     <a href="{{ route('album.show', $album->id) }}" class="btn btn-sm bshow me-2">Show</a>
                                     <a href="{{ route('album.edit', $album->id) }}" class="btn btn-sm bedit me-2">Edit</a>
                                     <form action="{{ route('album.delete', $album->id) }}" method="POST"
-                                        class="d-inline album-destroyer" custom-data-name="{{ $album->name }}">
+                                        class="d-inline">
                                         @csrf
                                         @method('DELETE')
 
