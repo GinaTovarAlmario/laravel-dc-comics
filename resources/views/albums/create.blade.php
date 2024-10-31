@@ -9,6 +9,13 @@
                     Creating a New Album
                 </h1>
             </div>
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ( as )
+
+                    @endforeach
+                </ul>
+            </div>
             <form class="col-8 card bg-dark-subtle m-3" method="POST" action="{{route('album.store')}}">
                 @csrf
                 <div class="mb-3">
