@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreAlbumRequest;
 use App\Models\Album;
 use Illuminate\Http\Request;
 
@@ -29,18 +30,10 @@ class AlbumController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreAlbumRequest $request)
     {
         // vado a fare la validazione per i dati inseriti
-        $request->validate([
-            'title'=>'required|string|min:3|max:255',
-            'date_release'=>'required|date',
-            'img_url'=>'required|url',
-            'number_of_tracks'=>'required|integer|min:1',
-            'main_track'=>'required|string|min:2|max:255',
-            'description'=>'required|string|min:2|max:1000',
-
-        ]);
+        $request->validate();
 
         $albumData = $request->all();
 
