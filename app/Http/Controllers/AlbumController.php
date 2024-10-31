@@ -79,6 +79,16 @@ class AlbumController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $request->validate([
+            'title'=>'required|string|min:3|max:255',
+            'date_release'=>'required|date',
+            'img_url'=>'required|url',
+            'number_of_tracks'=>'required|integer|min:1',
+            'main_track'=>'required|string|min:2|max:255',
+            'description'=>'required|string|min:2|max:1000',
+
+        ]);
+
         $formData = $request->all();
         $album = Album::findOrFail($id);
 
