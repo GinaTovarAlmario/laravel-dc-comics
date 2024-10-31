@@ -9,14 +9,18 @@
                     Creating a New Album
                 </h1>
             </div>
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ( as )
-
-                    @endforeach
-                </ul>
-            </div>
-            <form class="col-8 card bg-dark-subtle m-3" method="POST" action="{{route('album.store')}}">
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>
+                                {{ $error }}
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            <form class="col-8 card bg-dark-subtle m-3" method="POST" action="{{ route('album.store') }}">
                 @csrf
                 <div class="mb-3">
                     <label for="title" class="form-label">Title</label>
@@ -24,7 +28,8 @@
                 </div>
                 <div class="mb-3">
                     <label for="date_release" class="form-label">Date of Release</label>
-                    <input type="text" class="form-control" id="date_release" name="date_release" placeholder="YYYY-MM-DD">
+                    <input type="text" class="form-control" id="date_release" name="date_release"
+                        placeholder="YYYY-MM-DD">
                 </div>
                 <div class="mb-3">
                     <label for="img_url" class="form-label">Image Cover Url</label>
