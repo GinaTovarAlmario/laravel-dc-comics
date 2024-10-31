@@ -70,17 +70,9 @@ class AlbumController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(StoreAlbumRequest $request, string $id)
     {
-        $request->validate([
-            'title'=>'required|string|min:3|max:255',
-            'date_release'=>'required|date',
-            'img_url'=>'required|url',
-            'number_of_tracks'=>'required|integer|min:1',
-            'main_track'=>'required|string|min:2|max:255',
-            'description'=>'required|string|min:2|max:1000',
-
-        ]);
+        $request->validate();
 
         $formData = $request->all();
         $album = Album::findOrFail($id);
@@ -93,6 +85,7 @@ class AlbumController extends Controller
         $album->description = $formData["description"];
 
         $album->update();
+        
         return redirect()->route("album.show", [ "id" => $album->id]);
     }
 

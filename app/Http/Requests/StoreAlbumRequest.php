@@ -30,5 +30,14 @@ class StoreAlbumRequest extends FormRequest
             'description'=>'required|string|min:2|max:1000',
         ];
     }
-
+    public function message(){
+        return[
+            'title.required'=>'Il nome è obbligatorio',
+            'date_release.required'=>'La data di rilascio è obbligatoria',
+            'img_url.required'=>'Una cover album è obbligatoria',
+            'number_of_tracks.required'=>'Il numero di tracce è obbligatorio',
+            'main_track.required'=>'Il brano principale è obbligatorio',
+            'description.required'=>'La descrizione è obbligatoria',
+        ];
+    }
 }
