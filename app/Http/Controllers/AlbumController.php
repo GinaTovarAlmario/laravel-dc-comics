@@ -34,7 +34,12 @@ class AlbumController extends Controller
         // vado a fare la validazione per i dati inseriti
         $request->validate([
             'title'=>'required|string|min:3|max:255',
-            'main_track'=>'required|string|min:2|max:255'
+            'date_release'=>'required|date',
+            'img_url'=>'required|url|max:255',
+            'number_of_tracks'=>'required|integer|min:1',
+            'main_track'=>'required|string|min:2|max:255',
+            'description'=>'required|string|min:2|max:1000',
+
         ]);
 
         $albumData = $request->all();
